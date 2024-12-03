@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fifteen Puzzle</title>
+    <link rel='stylesheet' href='Fifteen.css'>
+</head>
+<body onload="initializeGame()">
+    <header class="header">
+        <h1 class="logo"><a href="#">Fifteen Puzzle</a></h1>
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Fifteen.html">Puzzle</a></li>
+        </ul>
+    </header> 
+
+    <div id="wrapper">
+        <div id="records_container">
+            <table id="records">
+                <tr>
+                    <th>Number of Moves</th>
+                    <th>Game Time</th>
+                </tr>
+                <tr>
+                    <td id="movesDisplay">0</td>
+                    <td id="timerInterval">0 Seconds</td>
+                </tr>
+            </table>
+        </div>
+
+        <p>
+            Welcome to the classic **Fifteen Puzzle** game! Your goal is to arrange the puzzle pieces in the correct order by sliding them into the empty space. Can you solve it in the fewest moves and in the shortest time possible? Start the game, track your progress, and challenge yourself to beat your best time!
+        </p>
+        
+        <span id="win"></span>
+
+        <select id="characters" name="characters" title="Backgrounds" onchange="changeBackground()">
+            <option value="super-mario" id="super-mario">Super Mario</option>
+            <option value="luigi" id="luigi">Luigi</option>
+            <option value="bowser" id="bowser">Bowser</option>
+            <option value="toad" id="toad">Toad</option>
+        </select>
+
+        <div id="main">
+            <div id="one" class="tile">1</div>
+            <div id="two" class="tile">2</div>
+            <div id="three" class="tile">3</div>
+            <div id="four" class="tile">4</div>
+            <div id="five" class="tile">5</div>
+            <div id="six" class="tile">6</div>
+            <div id="seven" class="tile">7</div>
+            <div id="eight" class="tile">8</div>
+            <div id="nine" class="tile">9</div>
+            <div id="ten" class="tile">10</div>
+            <div id="eleven" class="tile">11</div>
+            <div id="twelve" class="tile">12</div>
+            <div id="thirteen" class="tile">13</div>
+            <div id="fourteen" class="tile">14</div>
+            <div id="fifteen" class="tile">15</div>
+            <div id="sixteen" class="tile"></div>
+        </div>
+
+        <!-- Buttons container -->
+        <div id="button-container">
+            <a class="button" onclick="shuffleBoard()">Shuffle</a>
+            <a class="button" onclick="cheat()">Cheat</a>
+        </div>
+
+        <!-- New container to position the W3C icons -->
+      <!-- W3C icons container -->
+<div id="w3c-icons-container">
+    <a href="http://www.jslint.com/" target="_blank"><img src="jslint.png" alt="JSLint" /></a>
+    <a href="https://jigsaw.w3.org/css-validator/" target="_blank"><img src="w3c-css.png" alt="W3C CSS" /></a>
+    <a href="https://validator.w3.org/" target="_blank"><img src="wrc-xhtml.png" alt="W3C XHTML" /></a>
+</div>
+
+    </div>
+
+    <script src="Fifteen.js"></script>
+</body>
+</html>
